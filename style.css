@@ -1,1 +1,170 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
+body{
+    font-family:'Poppins',sans-serif;
+    background:#050505;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+.hidden{
+    display:none;
+}
+
+#loading{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:
+    radial-gradient(circle at top,#222,#050505);
+}
+
+#loading h2{
+    font-family:'Cinzel',serif;
+    color:#d4af37;
+    letter-spacing:5px;
+    font-size:3rem;
+}
+
+#loading p{
+    margin-top:15px;
+    letter-spacing:8px;
+    color:#888;
+}
+
+#enterBtn{
+    margin-top:45px;
+    padding:15px 45px;
+    background:#d4af37;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    border-radius:40px;
+    transition:.4s;
+}
+
+#enterBtn:hover{
+    transform:scale(1.08);
+}
+
+.sky{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    background:
+    linear-gradient(#050505,#111);
+}
+
+.moon{
+    position:absolute;
+    top:70px;
+    right:120px;
+    width:140px;
+    height:140px;
+    background:#f5f3ce;
+    border-radius:50%;
+    box-shadow:0 0 80px #fff5;
+}
+
+.signal{
+    position:absolute;
+    top:110px;
+    right:145px;
+    font-size:70px;
+    opacity:.25;
+    animation:pulse 4s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+opacity:.2;
+transform:scale(1);
+}
+
+50%{
+opacity:.6;
+transform:scale(1.15);
+}
+
+100%{
+opacity:.2;
+transform:scale(1);
+}
+
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.envelope{
+    width:380px;
+    height:250px;
+    background:#181818;
+    position:relative;
+    border-radius:8px;
+    cursor:pointer;
+    box-shadow:
+    0 0 40px #000,
+    0 0 20px #d4af3720;
+    transition:1s;
+}
+
+.flap{
+    position:absolute;
+    width:100%;
+    height:125px;
+    background:#232323;
+    clip-path:polygon(0 0,50% 100%,100% 0);
+    transform-origin:top;
+    transition:1s;
+    z-index:5;
+}
+
+.seal{
+    position:absolute;
+    top:95px;
+    left:50%;
+    transform:translateX(-50%);
+    width:70px;
+    height:70px;
+    background:#d4af37;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    z-index:10;
+    transition:.5s;
+}
+
+.letter{
+    position:absolute;
+    width:92%;
+    left:4%;
+    bottom:5px;
+    height:92%;
+    background:#f7f2df;
+    color:#222;
+    border-radius:10px;
+    padding:30px;
+    transform:translateY(150px);
+    transition:1s;
+    overflow:auto;
+}
+
+.letter h1{
+    font-family:'Cinzel',serif;
+    text-align:center;
+    margin-bottom:25px;
+}
